@@ -1,0 +1,317 @@
+header {
+    background-color: grey;
+    width: 100%;
+    height: 20%;
+}
+
+.header {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;  
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+}
+
+.header ul li{
+    margin-right: 20px;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.header ul li a:hover{
+    color: chocolate;
+}
+
+.header select {
+    margin-right: 20px;
+    background-color: gray;
+    color: antiquewhite;
+}
+
+.header_a {
+    background-color: rgb(44, 89, 140);
+    height: 100%;
+    padding: 15px 20px;
+}
+
+.main {
+    align-content: center;
+    width: 100%;
+    align-items: center;
+    background-image: url("../images/background1.jpg");
+    height: 600px;
+    background-position: 50%;
+    position: relative;
+}
+
+.main_header {
+    display: flex;
+    width: 80%;
+}
+
+.main_header_first {
+    display: block;
+    margin-right: 250px;
+}
+
+.main_header_first h1 {
+    color: olive;
+    font-size: 35px;
+    margin: 0;
+}
+
+.main_header_first a {
+    color: olive;
+    font-size: 20px;
+}
+
+.main_header_second {
+    display: flex;
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 10px;
+    width: 250px;
+    margin-right: 20px;
+}
+
+.main_header_second img{
+    width: 50px;
+    height: 50px;
+}
+
+.main_header_second_a{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.main_header_second_a a#first{
+    font-size: 15px;
+    color: olive;
+    font-style: italic;
+}
+
+.main_header_second_a a#second{
+    font-size: 15px;
+    color: olive;
+}
+
+.main_header_third {
+    display: block;
+    padding: 10px;
+    margin-right: 20px;
+    width: 200px;
+}
+
+.main_header_third button{
+    background-color: transparent;
+    height: 100%;
+    color: olive;
+}
+
+.main_header_third button:hover{
+    background-color: chocolate;
+}
+
+.main_header_fourth {
+    display: flex;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.main_header_fourth img {
+    width: 50px;
+    height: 50px;
+}
+
+.main_header_fourth a {
+    color: olive;
+    font-style: italic;
+}
+
+.main_content {
+    display: inline;
+}
+
+.main_content h1 {
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.main_content h3 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.sponsor_block {
+    width: 100%;
+    display: flex;
+    background-color: lightsteelblue;
+    height: 70px;
+    align-content: center;
+}
+
+.sponsor_block img{
+    width: 200px;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.sponsor_block button {
+    background-color: transparent;
+    border-color: rgb(0, 221, 255);
+    border-radius: 50px;
+}
+
+.calendar {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.calendar h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.calendar a#town_label {
+    font-size: 20px;
+}
+
+.calendar a#choose_town {
+    font-size: 20px;
+    text-decoration: none;
+    border-bottom: 2px dashed dodgerblue;
+    color: dodgerblue;
+}
+
+.countries {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.countries a{
+    text-decoration: none;
+    color: dodgerblue;
+    font-size: 20px;
+    margin: auto 10px;
+}
+
+.countries a:hover{
+    color: black;
+    border-bottom: 3px solid dodgerblue;
+}
+
+.calendar a#all_side{
+    font-size: 20px;
+    color: dodgerblue;
+    margin-top: 20px;
+}
+
+.popular_side_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 140px;
+}
+
+.popular_side_card {
+    border: 1px solid rgb(0, 221, 255);
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+
+.popular_side h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.popular_side_card img {
+    width: 100%;
+    height: auto;
+}
+
+.popular_side_card img:hover {
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+.opisanie {
+    display: flex;
+    color: dodgerblue;
+    padding: 5px 10px;
+}
+
+.opisanie h3{
+    font-size: 25px;
+    margin: 0px;
+}
+
+.opisanie h3:hover{
+    color: chocolate;
+    cursor: pointer;
+}
+
+.opisanie h5{
+    width: 100%;
+    color: chocolate;
+    margin: 0px 0px;
+}
+
+.opisanie img{
+    width: 40px;
+    height: 25px;
+}
+
+.popular_side_card a {
+    color: dodgerblue;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.popular_side_card a:hover {
+    color: chocolate
+}
+
+.popular_side_card span {
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.popular_side_card span:hover {
+    color: chocolate;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(11, 12, 30);
+    color: grey;
+}
+
+.left_side_footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 140px;
+}
+
+.left_side_footer ul {
+    list-style: none;
+}
+
+.left_side_footer ul li a{
+    text-decoration: none;
+    color: grey;
+}

@@ -1,0 +1,240 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelata</title>
+    <link rel="stylesheet" href="{% static 'css/indexStyle.css' %}"/>
+</head>
+<body>
+    <a href="{% url 'postForm' %}"></a>
+    {% block content %}
+    <header>
+        <div class="header">
+            <ul>
+                <li><a href="">Горящие туры</a></li>
+                <li><a>Поиск отелей</a></li>
+                <li><a>Поиск туров</a></li>
+                <li><a>Отдых в России</a></li>
+                <li><a>О нас</a></li>
+                <li><a>еще...</a></li>
+            </ul>
+            <select>
+                <option>Владимир</option>
+                <option>Рязань</option>
+                <option>Москва</option>
+            </select>
+            <div class="header_a">
+                <a>Войти в личный кабинет</a>
+            </div>
+        </div>
+    </header>
+    <div class="main"> <!--основной див-->
+        <div class="main_header"> <!--див для шапки в основном диве-->
+            <div class="main_header_first"> <!--отдельная ячейка в шапке-->
+                <h1>travelata.ru</h1>
+                <a>интернет-магазин туров</a>
+            </div>
+            <div class="main_header_second">
+                <img/>
+                <div class="main_header_second_a">
+                    <a id="first">Частые вопросы</a> <br/>
+                    <a id="second">оплата, гарантии и т.д.</a>
+                </div>
+            </div>
+            <div class="main_header_third">
+                <button>Купить тур в офисе</button>
+            </div>
+            <div class="main_header_fourth">
+                <img/>
+                <a>Участник</a>
+            </div>
+        </div>
+        <div class="main_content">
+            <h1>Выбирайте и покупайте туры онлайн</h1>
+            <h3>по ценам туроператоров или ниже</h3><br/>
+            <h3>с поддержкой до и после покупки</h3>
+        </div>
+        <form>
+
+        </form>
+    </div>
+    <div class="sponsor_block">
+        <img src="" alt=""/>
+        <img src="" alt=""/>
+        <img src="" alt=""/>
+        <img src="" alt=""/>
+        <button>
+            Рейтинг туроператоров
+        </button>
+    </div>
+    <div class="calendar">
+        <h1>Календарь низких цен</h1>
+        <a id="town_label">Город вылета:</a>
+        <a id="choose_town" href="">Москва</a>
+        <div class="countries">
+            <a href="">Турция</a>
+            <a href="">Египет</a>
+            <a href="">Россия</a>
+            <a href="">ОАЭ</a>
+            <a href="">Тайланд</a>
+            <a href="">Куба</a>
+            <a href="">Шри-Ланка</a>
+            <a href="">Индия</a>
+            <a href="">Мальдивы</a>
+        </div>
+        <a id="all_side">все направления -></a>
+    </div>
+    <div>
+        Календарик
+    </div>
+    {% for i in data %}
+        <a>{{i}}</a>
+    {% endfor %}
+
+    <div class="popular_side">
+        <h1>Популярные направления</h1>
+        <div class="popular_side_cards">
+            {% for i in data %}
+            <div class="popular_side_card">
+                <img src="{% static 'images/turkish.jpg' %}"/>
+                <div class="opisanie">
+                    <h3>{{i}}</h3>
+                    <h5>Без визы</h5>
+                    <img src="{% static 'images/turkey-flag.png' %}"/>
+                </div>
+                {% for j in i %}
+                    <a href="">{{j}}, </a>
+                {% endfor %}
+                <br/>
+                <span>от 29 447 руб./чел.</span>
+            </div>
+            {% endfor %}
+<!--            <div class="popular_side_card">-->
+<!--                <img src="{% static 'images/egypt.jpg' %}"/>-->
+<!--                <div class="opisanie">-->
+<!--                    <h3>Египет</h3>-->
+<!--                    <h5>Без визы</h5>-->
+<!--                    <img src="{% static 'images/egypt-flag.png' %}"/>-->
+<!--                </div>-->
+<!--                <a href="">Каир, </a>-->
+<!--                <a href="">Хургада, </a>-->
+<!--                <a href="">Макади</a>-->
+<!--                <br/>-->
+<!--                <span>от 39 828 руб./чел.</span>-->
+<!--            </div>-->
+<!--            <div class="popular_side_card">-->
+<!--                <img src="{% static 'images/russia.jpg' %}"/>-->
+<!--                <div class="opisanie">-->
+<!--                    <h3>Россия</h3>-->
+<!--                    <h5>Без визы</h5>-->
+<!--                    <img src="{% static 'images/russia-flag.png' %}"/>-->
+<!--                </div>-->
+<!--                <a href="">Каспийск, </a>-->
+<!--                <a href="">Сочи, </a>-->
+<!--                <a href="">Дербент</a>-->
+<!--                <br/>-->
+<!--                <span>от 14 930 руб./чел.</span>-->
+<!--            </div>-->
+        </div>
+    </div>
+
+    <footer>
+        <div class="left_side_footer">
+            <div display="flex" grid-template-columns="1fr 1fr">
+                <div>
+                    <h2>О компании</h2>
+                    <ul>
+                        <li><a href="">Офисы продаж</a></li>
+                        <li><a>О компании</a></li>
+                        <li><a>О нас</a></li>
+                        <li><a>Пресса о нас</a></li>
+                        <li><a>Отзывы о нас</a></li>
+                        <li><a>Наши партнеры</a></li>
+                        <li><a>Реквизиты</a></li>
+                        <li><a>Вакансии</a></li>
+                        <li><a>Контакты</a></li>
+                        <li><a>Для журналистов</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Партнеры</h2>
+                    <ul>
+                        <li><a>Партнерская программа</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h2>Туристам</h2>
+                    <ul>
+                        <li><a>Пользовательское соглашение</a></li>
+                        <li><a>Правила покупки</a></li>
+                        <li><a>Как купить тур</a></li>
+                        <li><a>Частые вопросы</a></li>
+                        <li><a>Обратная связь</a></li>
+                        <li><a>Туры в рассрочку</a></li>
+                        <li><a>Страхование</a></li>
+                        <li><a>Горнолыжные туры</a></li>
+                        <li><a>Договор</a></li>
+                        <li><a>Атлас</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><a>Правила распространения и использования промокодов и/или купонов</a></li>
+                        <li><a>Соглашение о конфидециальности</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="middle_side_footer">
+            <h2>Партнеры</h2>
+            <div>
+                <div><img/></div>
+                <div><img/></div>
+                <div><img/></div>
+            </div>
+            <div>
+                <div><img/></div>
+                <div><img/></div>
+            </div>
+            <div>
+                <div><img/></div>
+                <div><img/></div>
+                <div><img/></div>
+            </div>
+            <h2>Мы в социальных сетях:</h2>
+            <div>
+                <button id="ok"></button>
+                <button id="vk"></button>
+                <button id="vb"></button>
+                <button id="tg"></button>
+            </div>
+            <h2 id="download_app">Все туры в одном приложении</h2>
+            <div>
+                <div>
+                    <img/>
+                    <div>
+                        <span>Скачать из</span>
+                        <a id="as">App Store</a>
+                    </div>
+                </div>
+                <div>
+                    <img/>
+                    <div>
+                        <span>Скачать из</span>
+                        <a id="gp">Google play</a>
+                    </div>
+                </div>
+                <div>
+                    <h2>Блог</h2>
+                    <h2>Карта сайта</h2>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+</body>
+</html>
