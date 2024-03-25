@@ -89,14 +89,11 @@
     <div>
         Календарик
     </div>
-    {% for i in data %}
-        <a>{{i}}</a>
-    {% endfor %}
 
     <div class="popular_side">
         <h1>Популярные направления</h1>
         <div class="popular_side_cards">
-            {% for i in data %}
+            {% for i in countries %}
             <div class="popular_side_card">
                 <img src="{% static 'images/turkish.jpg' %}"/>
                 <div class="opisanie">
@@ -104,8 +101,10 @@
                     <h5>Без визы</h5>
                     <img src="{% static 'images/turkey-flag.png' %}"/>
                 </div>
-                {% for j in i %}
-                    <a href="">{{j}}, </a>
+                {% for j in dct %}
+<!--                {% if i == dct.j %}-->
+                <a href="">{{j}}</a>
+<!--                {% endif %}-->
                 {% endfor %}
                 <br/>
                 <span>от 29 447 руб./чел.</span>
